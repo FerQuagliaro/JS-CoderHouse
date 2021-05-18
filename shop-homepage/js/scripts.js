@@ -45,43 +45,40 @@ function agregarAlCarrito(producto){
     console.log(typeof JSON.stringify(Carrito));
     console.log(Carrito);
 
-    document.getElementById("mensajes").innerHTML = `Se Agrego al carrito`;
+    //mostramos mensaje en la pantalla
+    document.getElementById("mensajes").innerHTML = `<div class="alert alert-info">Se Agrego al carrito</div>`;
 };
 
 //agregarAlCarrito(ProductoUno);
 
-//estructura JSON
+//recorrer un array
+const ArraydeElementos = document.getElementsByClassName("nav-link");
 
-let nuestroPrimerJSON = {
-    nombre: "Fer",
-    apellido: "Quagliaro"
+for(let i = 0; i < ArraydeElementos.length; i++){
+    //mostrar el array de elementos con la class nav-link
+    console.log(ArraydeElementos[i].innerHTML ="nuevo link");
+    console.log(ArraydeElementos[i].style.color ="red");
+    console.log(ArraydeElementos[i].style.background ="grey");
 };
 
 
-//recorrer un array
-const ArraydeElementos = document.getElementsByClassName("nav-link");
-//document.getElementsByClassName("nav-link");
-//para poder recorrer el array
-for(let i = 0; i < ArraydeElementos.length; i++){
- //console.log(ArraydeElementos[i]);
- //console.log(ArraydeElementos[i].innerHTML= "nuevo link");
- console.log(ArraydeElementos[i].style.color= "red");
-}
-
-//recorrer un array
+//recorrer un array de tags
 const ArraydeElementosDiv = document.getElementsByTagName("div");
-//document.getElementsByClassName("nav-link");
-//para poder recorrer el array
-for(let i = 0; i < ArraydeElementosDiv.length; i++){
- //console.log(ArraydeElementos[i]);
- //console.log(ArraydeElementos[i].innerHTML= "nuevo link");
- console.log(ArraydeElementosDiv[i].style.background= "red");
-}
 
-// Crear nodo de tipo Elemento, etiqueta p
+for(let i = 0; i < ArraydeElementosDiv.length; i++){
+    //mostrar el array de elementos con la class nav-link
+    //console.log(ArraydeElementosDiv[i].style.color ="red");
+    console.log(ArraydeElementosDiv[i].style.background ="grey");
+};
+
+//Creamos un nodo de tipo Elemento, Etiqueta P
 let parrafo = document.createElement("p");
-// Insertar HTML interno
-parrafo.innerHTML = "<h2>¡Hola Coder!</h2>"; 
-// Añadir el nodo Element como hijo de body
+//Insertamos HTML
+parrafo.innerHTML = "<h2> Hola Mundo!</h2>";
+//Añadimos el nodo como hijo del body
 document.body.appendChild(parrafo);
 
+//let parrafo =document.getElementById("parrafo1");
+//parrafo.parentNode.removeChild(parrafo);
+
+document.getElementById("nombre").nodeValue;
